@@ -1,0 +1,44 @@
+
+.glow {
+  color: yellow !important;
+  animation: glow 1s infinite alternate;
+ }
+.rotate {
+  animation: rotate 2s linear infinite;
+}
+
+.moving-bg {
+  animation: move-bg 5s linear infinite;
+  background: linear-gradient(to right, #ffefd5, #fff5ee, #f0ffff);
+  background-size: 200% auto;
+}
+
+@keyframes glow {
+  0% {
+    color: yellow;
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow, 0 0 60px yellow, 0 0 70px yellow;
+  }
+  100% {
+    color: #ffffff;
+    text-shadow: none;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes move-bg {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
